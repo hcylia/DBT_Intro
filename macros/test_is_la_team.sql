@@ -3,7 +3,8 @@
 with validation as (
 
     select
-        {{ column_name }} as city
+        {{ column_name }} as city,
+        name
 
     from {{ model }}
 
@@ -17,6 +18,7 @@ validation_errors as (
     from validation
 
     where city = 'Los Angeles'
+        and name not in ('Lakers', 'Clippers')
 
 )
 
