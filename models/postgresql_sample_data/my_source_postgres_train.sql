@@ -1,3 +1,5 @@
+{{ config(materialized='view', schema='staging') }}
+
 with source_train as (
     select * from {{ source('source_postgres', 'train') }}
 ),
