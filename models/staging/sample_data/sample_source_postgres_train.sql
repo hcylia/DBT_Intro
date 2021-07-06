@@ -1,7 +1,7 @@
 {{ config(materialized='view', schema='staging') }}
 
 with source_train as (
-    select * from {{ source('source_postgres', 'train') }}
+    select * from {{ source('sample_source_postgres', 'train') }}
 ),
 
 final as (

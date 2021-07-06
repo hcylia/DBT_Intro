@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: source_postgres
+  - name: sample_source_postgres
     description: 'Source database.'
     database: postgres
     schema: public
