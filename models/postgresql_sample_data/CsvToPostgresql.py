@@ -15,8 +15,9 @@ def insert_create(cnx, db):
 
 def migration(cnx):
     db = {}
-    tbl = "train.csv"
-    db[tbl] = pd.read_csv(_path+'\\\\'+tbl)
+    file = "train.csv"
+    tbl = file.split(".")[0]
+    db[tbl] = pd.read_csv(os.path.join(_path, file))
     insert_create(cnx, db)
     return db
 
