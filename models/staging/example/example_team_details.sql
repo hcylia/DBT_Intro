@@ -19,4 +19,4 @@ final as (
     from teams
 )
 
-select * from final
+select *, '{{ invocation_id }}' as invocation_id from final
