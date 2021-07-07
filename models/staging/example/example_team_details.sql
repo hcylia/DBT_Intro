@@ -1,5 +1,10 @@
 with teams as (
     select * from {{ ref('teams') }}
+--    union all
+--    select
+--        'Bulls' as name,
+--        '' as city,
+--        '' as state
 ),
 
 
