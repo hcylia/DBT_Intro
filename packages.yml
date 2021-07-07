@@ -1,3 +1,5 @@
 packages:
   - package: calogica/dbt_date
     version: [">=0.3.0", "<0.4.0"]
+#  - git: "https://github.com/mjkahan/dbt_music_data.git"
+#    revision: add_macro
