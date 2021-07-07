@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: example_team_details
+  - name: dim_team_details
     description: >
       A list of few NBA teams tha made the Playoffs in 2020.
 
