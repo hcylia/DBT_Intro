@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: demo_sources
+    database: postgres
+    schema: public
+
+    freshness: # default freshness
+      warn_after: {count: 5, period: minute} # day, hour, minute
+      error_after: {count: 10, period: minute}
+      filter: (extract ('EPOCH' from CURRENT_TIMESTAMP) - extract ('EPOCH' from created_at))/60 < 40
+    # show timezone;
+    loaded_at_field: "created_at at time zone 'UTC'"
+
+    tables:
+      - name: dbt_audits
+        description: 'You already know.'
+        columns:
+          - name: id
+          - name: name
+          - name: created_at
